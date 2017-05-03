@@ -1,0 +1,76 @@
+
+@model RegisterTeacherViewModel
+<h1 class="page-header">Register</h1>
+
+<form asp-controller="Account" asp-action="RegisterTeacher" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Email" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="ConfirmPassword" class="form-control" />
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="LevelSelect" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <label class="radio-inline">
+                @Html.RadioButton("LevelSelect", "student", true, new { onclick = "studentSelect();" })Student
+            </label>
+            <label class="radio-inline">
+                @Html.RadioButton("LevelSelect", "teacher", new { onclick = "teacherSelect();" })Teacher
+            </label>
+         </div>
+     </div>
+    <div id="teacher-details" style="display: none;">
+        <div class="form-group">
+            <label asp-for="TeacherName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TeacherName" class="form-control" value="Teacher Name"/>
+                <span asp-validation-for="TeacherName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Studio" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Studio" class="form-control" value="Studio Name"/>
+                <span asp-validation-for="Studio" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Cert" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Cert" class="form-control" value="Cert Name"/>
+                <span asp-validation-for="Cert" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-default">Register</button>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+
+
+
+

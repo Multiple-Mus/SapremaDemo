@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using SapremaMain.Models
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
+            <img class="circle-holder" src="~/images/buddha.svg" alt="Buddha" />
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 menu-text">
+            <h1>ASANA</h1>
+            <h2>Be at one with your body with a range of our classes</h2>
+            <p><a href="#primary-modal" data-toggle="modal" class="menu-link" id="menu-classes-btn">Classes:</a> Create your own or generate a random class</p>
+            <p><a href="#" class="menu-link" id="menu-classes-saved-btn">Saved Classes:</a> Practice your saved classes</p>
+            <p><a href="~/Profile/MyGroups"  class="menu-link" id="menu-classes-groups-btn">Groups:</a> Manage your grououps</p>
+            <p><a asp-area="" asp-controller="Asana" asp-action="Store" class="menu-link" id="menu-classes-store-btn">Store:</a> Search for classes or groups</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
+            <img class="circle-holder" src="~/images/om.svg" alt="Om Symbol" />
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 menu-text">
+            <h1>MEDITATION</h1>
+            <h2>Relax your mind with a range of our meditations</h2>
+            <p><a asp-area="" asp-controller="Meditation" asp-action="Meditations" class="menu-link" id="menu-meditation-btn">Meditations:</a> Play meditations you have bookmarked</p>
+            <p><a asp-area="" asp-controller="Meditation" asp-action="BreathTimer" class="menu-link" id="menu-meditation-breath-btn">Breath Timer:</a> Practice your breath using a timer</p>
+            @if (User.IsInRole("Admin"))
+            {
+                <p><a asp-area="" asp-controller="Meditation" asp-action="ManageMeditations" class="menu-link">Manage Meditation:</a> Upload meditations to the store</p>
+            }
+            <p><a asp-area="" asp-controller="Meditation" asp-action="MeditationStore" class="menu-link" id="menu-meditation-store-btn">Store:</a> Search for meditations</p>
+        </div>
+    </div>
+}
+else
+{
+    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2"><img id="landing-logo" src="~/images/logoBorder.svg" alt="Saprema logo with border" width="100%" /> </div>
+}

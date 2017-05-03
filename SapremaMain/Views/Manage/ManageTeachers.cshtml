@@ -1,0 +1,60 @@
+@model SapremaMain.Models.MeditationViewModels.ManageTeachersViewModel
+
+<div class="container">
+    <h1 class="page-header">Manage Teachers</h1>
+</div>
+@*<div class="container">
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+            Status:
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+            <select class="form-control">
+                <option value="verified">Verified</option>
+                <option value="notVerified">Not Verified</option>
+            </select>
+        </div>
+</div>*@
+<div class="container scroll-div">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+        <ul>
+            @if (Model.TeacherItems != null && Model.TeacherItems.Count > 0)
+            {
+                foreach (var teacherItem in @Model.TeacherItems)
+                {
+                    <form id="@teacherItem.TeachId" enctype="multipart/form-data" asp-controller="Manage" asp-action="ManageTeachers" method="POST" class="form-horizontal">
+                        <li class="teacher-list">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    @teacherItem.FullName
+                                </div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-5">
+                                    Teacher Email
+                                </div>
+                                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                    @if (teacherItem.Verified == true)
+                                    {
+                                        <span class="label label-success">Verified</span>
+                                    }
+                                    else if (teacherItem.Verified == false)
+                                    {
+                                        <span class="label label-danger">Not Verified</span>
+                                    }
+                                </div>
+                                <input asp-for="TeacherId" type="hidden" value="@teacherItem.TeachId"/>
+                                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-1">
+
+                                    <button data-medId="@teacherItem.TeachId" class="btn btn-default pull-right teacher-list-btn">EDIT</button>
+                                </div>
+                            </div>
+                        </li>
+                    </form>
+                        <hr />
+                }
+
+            }
+</ul>
+    </div>
+</div>
+
+<div id="verify-modal" class="modal fade" role="dialog">
+</div>

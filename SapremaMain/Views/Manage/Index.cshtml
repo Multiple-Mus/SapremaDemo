@@ -1,0 +1,160 @@
+﻿@model IndexViewModel
+
+<h1 class="page-header">Profile</h1>
+<p class="text-success">@ViewData["StatusMessage"]</p>
+
+<div>
+    <form>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                    <label>Email address</label>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                    <input type="email" class="form-control" name="email" id="profile-email" placeholder="@Model.Email" required>
+                </div>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                    <label>Password</label>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                    @if (Model.HasPassword)
+                    {
+                        <a asp-controller="Manage" asp-action="ChangePassword" class="btn-bracketed">Change</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Manage" asp-action="SetPassword" class="btn-bracketed">Create</a>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                    <label>Name</label>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                    <input type="text" class="form-control" name="name" id="profile-name" placeholder="@Model.TeacherName" required>
+                </div>
+            </div>
+        </div>
+        <!-- Teacher profile details get placed below here -->
+        <div id="teacher-profile">
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                        <label>Website</label>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                        <input type="text" class="form-control" name="website" id="profile-website" placeholder="@Model.Site">
+                    </div>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                        <label>Certification</label>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                        <input type="text" class="form-control" name="certification" id="profile-certification" placeholder="@Model.Cert" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                        <label>Bio</label>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                        <textarea style="width: 100%;" rows="5" name="profile-bio" placeholder="@Model.Bio"></textarea>
+                    </div>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                        <label>Studio</label>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                        <input type="text" class="form-control" name="certification" id="profile-studio" placeholder="@Model.Studio" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                    <label>Email Notifications</label>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
+            <button type="submit" class="btn btn-default" id="profile-update-btn">Update</button>
+        </div>
+    </form>
+@*
+    <dl class="dl-horizontal">
+        <dt>Password:</dt>
+        <dd>
+            @if (Model.HasPassword)
+            {
+                <a asp-controller="Manage" asp-action="ChangePassword" class="btn-bracketed">Change</a>
+            }
+            else
+            {
+                <a asp-controller="Manage" asp-action="SetPassword" class="btn-bracketed">Create</a>
+            }
+        </dd>
+
+    <dt>External Logins:</dt>
+    <dd>
+
+        @Model.Logins.Count <a asp-controller="Manage" asp-action="ManageLogins" class="btn-bracketed">Manage</a>
+    </dd>
+    <dt>Phone Number:</dt>
+    <dd>
+        <p>
+            Phone Numbers can be used as a second factor of verification in two-factor authentication.
+            See <a href="https://go.microsoft.com/fwlink/?LinkID=532713">this article</a>
+            for details on setting up this ASP.NET application to support two-factor authentication using SMS.
+        </p>
+        @(Model.PhoneNumber ?? "None")
+            @if (Model.PhoneNumber != null)
+            {
+                <br />
+                <a asp-controller="Manage" asp-action="AddPhoneNumber" class="btn-bracketed">Change</a>
+                <form asp-controller="Manage" asp-action="RemovePhoneNumber" method="post">
+                    [<button type="submit" class="btn-link">Remove</button>]
+                </form>
+            }
+            else
+            {
+                <a asp-controller="Manage" asp-action="AddPhoneNumber" class="btn-bracketed">Add</a>
+            }
+        </dd>
+
+        @*<dt>Two-Factor Authentication:</dt>
+    <dd>
+        <p>
+            There are no two-factor authentication providers configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532713">this article</a>
+            for setting up this application to support two-factor authentication.
+        </p>
+        @if (Model.TwoFactor)
+            {
+                <form asp-controller="Manage" asp-action="DisableTwoFactorAuthentication" method="post" class="form-horizontal">
+                    Enabled <button type="submit" class="btn-link btn-bracketed">Disable</button>
+                </form>
+            }
+            else
+            {
+                <form asp-controller="Manage" asp-action="EnableTwoFactorAuthentication" method="post" class="form-horizontal">
+                    <button type="submit" class="btn-link btn-bracketed">Enable</button> Disabled
+                </form>
+            }
+        </dd>
+    </dl>*@
+</div>

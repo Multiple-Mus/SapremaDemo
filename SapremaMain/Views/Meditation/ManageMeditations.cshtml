@@ -1,0 +1,34 @@
+@model SapremaMain.Models.MeditationViewModels.ManageMeditationsViewModel
+<div class="container">
+    <h1 class="page-header">Manage Meditations</h1>
+</div>
+
+<div>
+    <div id="listOfMeditations" class="col-lg-6 scroll-div"" >
+        <ul>
+            @if (Model.MeditationItems != null && Model.MeditationItems.Count > 0)
+            {
+                foreach (var meditationItem in @Model.MeditationItems)
+                {
+                    <li class="teacher-list medItem" data-medId="@meditationItem.MeditationId">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                @meditationItem.MeditationName
+                            </div>
+                        </div>
+                    </li>
+                    <hr />
+                }
+
+            }
+            </ul>
+</div>
+    <div id="editMed" class="col-lg-6" >
+        @Html.Partial("GetMeditationRecord.cshtml");
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+

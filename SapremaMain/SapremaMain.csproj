@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <UserSecretsId>aspnet-SapremaMain-c01e92ae-32f8-421a-9180-1449f6ad6f09</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot/audio\08be2333-28d1-41ad-bd42-a752fcfd16a8.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\audio\ding.mp3" />
+    <Content Include="wwwroot\audio\exhale.mp3" />
+    <Content Include="wwwroot\audio\test.mp3" />
+    <Content Include="wwwroot\audio\hold.mp3" />
+    <Content Include="wwwroot\audio\inhale.mp3" />
+    <Content Include="wwwroot\js\breathTimer.js" />
+    <Content Include="wwwroot\js\playMeditation.js" />
+    <Content Include="wwwroot\js\serializer.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.3" />
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Validation" Version="3.2.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.0" />
+    <PackageReference Include="Sendgrid" Version="9.1.1" />
+    <PackageReference Include="Twilio" Version="5.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.0" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\AsanaViewModels\" />
+    <Folder Include="Views\Meditation\" />
+    <Folder Include="wwwroot\images\meditationimg\" />
+    <Folder Include="wwwroot\images\meditationimg\" />
+  </ItemGroup>
+
+</Project>

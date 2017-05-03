@@ -1,0 +1,62 @@
+@model SapremaMain.Models.MeditationViewModels.ManageMeditationsViewModel
+
+@{ 
+    Layout = null;
+}
+<form id="@Model.MeditationId" enctype="multipart/form-data" asp-controller="Meditation" asp-action="ManageMeditations" method="POST" class="form-horizontal">
+    <h4>Edit Meditation</h4>
+    <hr />
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <input asp-for="MeditationId" type="hidden" />
+
+    <div class="form-group">
+        <label asp-for="MeditateTheme" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="MeditateTheme" class="form-control" />
+            <span asp-validation-for="MeditateTheme" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MeditateName" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="MeditateName" class="form-control" />
+            <span asp-validation-for="MeditateName" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MeditateType" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="MeditateType" class="form-control" />
+            <span asp-validation-for="MeditateType" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    @*<img style="width:80%;height:auto;" src="@Model.ImageUrl"
+         alt="default meditation image"
+          />*@
+
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Upload an image file:</p>
+            <input type="file" name="MeditateImage" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Upload an audio file:</p>
+            <input type="file" name="MeditateAudio" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-default">Save Meditaion</button>
+        </div>
+    </div>
+</form>

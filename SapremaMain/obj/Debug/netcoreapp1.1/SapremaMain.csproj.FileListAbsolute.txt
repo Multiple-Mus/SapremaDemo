@@ -1,0 +1,30 @@
+C:\Users\sohig\OneDrive\Visual Studio 2017\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.deps.json
+C:\Users\sohig\OneDrive\Visual Studio 2017\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.runtimeconfig.json
+C:\Users\sohig\OneDrive\Visual Studio 2017\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.runtimeconfig.dev.json
+C:\Users\sohig\OneDrive\Visual Studio 2017\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+C:\Users\sohig\OneDrive\Visual Studio 2017\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.AssemblyInfo.cs
+C:\Users\sohig\OneDrive\Visual Studio 2017\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.dll
+C:\Users\sohig\OneDrive\Visual Studio 2017\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.pdb
+C:\Users\sohig\OneDrive\Visual Studio 2017\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.dll
+C:\Users\sohig\OneDrive\Visual Studio 2017\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.pdb
+C:\Users\sohig\OneDrive\Visual Studio 2017\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.csprojResolveAssemblyReference.cache
+C:\Users\sohig\OneDrive\College\Year4Semester2\FinalProject\KMULA_20062197_SourceCode_Seamus_OHiggins\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.deps.json
+C:\Users\sohig\OneDrive\College\Year4Semester2\FinalProject\KMULA_20062197_SourceCode_Seamus_OHiggins\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.runtimeconfig.json
+C:\Users\sohig\OneDrive\College\Year4Semester2\FinalProject\KMULA_20062197_SourceCode_Seamus_OHiggins\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.runtimeconfig.dev.json
+C:\Users\sohig\OneDrive\College\Year4Semester2\FinalProject\KMULA_20062197_SourceCode_Seamus_OHiggins\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.dll
+C:\Users\sohig\OneDrive\College\Year4Semester2\FinalProject\KMULA_20062197_SourceCode_Seamus_OHiggins\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.pdb
+C:\Users\sohig\OneDrive\College\Year4Semester2\FinalProject\KMULA_20062197_SourceCode_Seamus_OHiggins\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.csprojResolveAssemblyReference.cache
+C:\Users\sohig\OneDrive\College\Year4Semester2\FinalProject\KMULA_20062197_SourceCode_Seamus_OHiggins\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+C:\Users\sohig\OneDrive\College\Year4Semester2\FinalProject\KMULA_20062197_SourceCode_Seamus_OHiggins\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.AssemblyInfo.cs
+C:\Users\sohig\OneDrive\College\Year4Semester2\FinalProject\KMULA_20062197_SourceCode_Seamus_OHiggins\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.dll
+C:\Users\sohig\OneDrive\College\Year4Semester2\FinalProject\KMULA_20062197_SourceCode_Seamus_OHiggins\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.pdb
+C:\Users\sohig\OneDrive\Visual Studio 2017\Projects\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.deps.json
+C:\Users\sohig\OneDrive\Visual Studio 2017\Projects\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.runtimeconfig.json
+C:\Users\sohig\OneDrive\Visual Studio 2017\Projects\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.runtimeconfig.dev.json
+C:\Users\sohig\OneDrive\Visual Studio 2017\Projects\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.csprojResolveAssemblyReference.cache
+C:\Users\sohig\OneDrive\Visual Studio 2017\Projects\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.AssemblyInfo.cs
+C:\Users\sohig\OneDrive\Visual Studio 2017\Projects\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.dll
+C:\Users\sohig\OneDrive\Visual Studio 2017\Projects\SapremaMain\SapremaMain\bin\Debug\netcoreapp1.1\SapremaMain.pdb
+C:\Users\sohig\OneDrive\Visual Studio 2017\Projects\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.dll
+C:\Users\sohig\OneDrive\Visual Studio 2017\Projects\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\SapremaMain.pdb
+C:\Users\sohig\OneDrive\Visual Studio 2017\Projects\SapremaMain\SapremaMain\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs

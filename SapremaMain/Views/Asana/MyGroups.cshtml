@@ -1,0 +1,21 @@
+@model List<SapremaMain.Models.ProfileViewModels.MyGroupsViewModel>
+@{
+    ViewData["Title"] = "MyGroups";
+}
+
+<h2>MyGroups</h2>
+
+    @foreach(var vm in Model)
+    {
+        <div data-group-item="@vm.GroupId" class="groupItem" style="width:80%;">
+            <span>@vm.GroupName</span>
+            <span>@vm.GroupTeacher</span>
+            <span>@vm.GroupDescription</span>
+            <div id="@vm.GroupId" style="display:none;">
+                <span>Class Name: Class 1</span>
+                <span>Theme: Crouching Dragon</span>
+                <span>Level: Advanced</span>
+            </div>
+        </div>
+    }
+
